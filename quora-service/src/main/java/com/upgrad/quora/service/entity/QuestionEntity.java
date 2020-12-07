@@ -17,66 +17,66 @@ import java.time.ZonedDateTime;
 })
 public class QuestionEntity implements Serializable {
 
-  @Id
-  @Column(name = "ID")
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
+    @Id
+    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-  @Column(name = "UUID")
-  @NotNull
-  private String uuid;
+    @Column(name = "UUID")
+    @NotNull
+    private String uuid;
 
-  @Column(name = "CONTENT")
-  @NotNull
-  @Size(max = 500)
-  private String content;
+    @Column(name = "CONTENT")
+    @NotNull
+    @Size(max = 500)
+    private String content;
 
-  @Column(name = "DATE")
-  @NotNull
-  private ZonedDateTime date;
+    @Column(name = "DATE")
+    @NotNull
+    private ZonedDateTime date;
 
-  @ManyToOne
-  @JoinColumn(name = "USER_ID")
-  private UserEntity userId;
+    @ManyToOne
+    @JoinColumn(name = "USER_ID")
+    private UserEntity userId;
 
 
-  public int getId() {
-    return id;
-  }
+    public int getId() {
+        return id;
+    }
 
-  public void setId(int id) {
-    this.id = id;
-  }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-  public String getUuid() {
-    return uuid;
-  }
+    public String getUuid() {
+        return uuid;
+    }
 
-  public void setUuid(String uuid) {
-    this.uuid = uuid;
-  }
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
 
-  public String getContent() {
-    return content;
-  }
+    public String getContent() {
+        return content;
+    }
 
-  public void setContent(String content) {
-    this.content = content;
-  }
+    public void setContent(String content) {
+        this.content = content;
+    }
 
-  public ZonedDateTime getDate() {
-    return date;
-  }
+    public ZonedDateTime getDate() {
+        return date;
+    }
 
-  public void setDate(ZonedDateTime date) {
-    this.date = date;
-  }
+    public void setDate(ZonedDateTime date) {
+        this.date = date;
+    }
 
-  public UserEntity getUserId() {
-    return userId;
-  }
+    public UserEntity getUserId() {
+        return userId;
+    }
 
-  public void setUserId(UserEntity userId) {
-    this.userId = userId;
-  }
+    public void setUserId(UserEntity userId) {
+        this.userId = userId;
+    }
 }

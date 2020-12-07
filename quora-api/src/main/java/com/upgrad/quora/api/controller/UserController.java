@@ -9,7 +9,6 @@ import com.upgrad.quora.service.business.UserBusinessService;
 import com.upgrad.quora.service.entity.UserAuthEntity;
 import com.upgrad.quora.service.entity.UserEntity;
 import com.upgrad.quora.service.exception.AuthenticationFailedException;
-import com.upgrad.quora.service.exception.AuthorizationFailedException;
 import com.upgrad.quora.service.exception.SignOutRestrictedException;
 import com.upgrad.quora.service.exception.SignUpRestrictedException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +31,13 @@ public class UserController {
     @Autowired
     private UserBusinessService userBusinessService;
 
+    /**
+     * This method is for user signup. This method receives the object of SignupUserRequest type with
+     * its attributes being set.
+     *
+     * @return SignupUserResponse - UUID of the user created.
+     * @throws SignUpRestrictedException - if the username or email already exist in the database.
+     */
     @RequestMapping(path = "/user/signup", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<SignupUserResponse> signup(final SignupUserRequest signupUserRequest) throws SignUpRestrictedException {
         final UserEntity userEntity = new UserEntity();
@@ -51,6 +57,15 @@ public class UserController {
         return new ResponseEntity<SignupUserResponse>(userResponse, HttpStatus.CREATED);
     }
 
+    /**
+     * This method is for a user to singin.
+     *
+     * @param authorization is basic auth (base 64 encoded). Usage: Basic <Base 64 Encoded
+     *                      username:password>
+     * @return SigninResponse which contains user id and a access-token in the response header.
+     * @throws AuthenticationFailedException ATH-001 if username doesn't exist, ATH-002 if password is
+     *                                       wrong.
+     */
     @RequestMapping(path = "/user/signin", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<SigninResponse> signin(@RequestHeader("authorization") final String authorization) throws AuthenticationFailedException {
         if (!authorization.startsWith("Basic ")) {
@@ -67,6 +82,13 @@ public class UserController {
         return new ResponseEntity<SigninResponse>(userResponse, headers, HttpStatus.OK);
     }
 
+    /**
+     * This method is used to signout user.
+     *
+     * @param authorization Token used for authenticating the user.
+     * @return UUID of the user who is signed out.
+     * @throws SignOutRestrictedException if the
+     */
     @RequestMapping(path = "/user/signout", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<SignoutResponse> signout(@RequestHeader("authorization") final String authorization) throws SignOutRestrictedException {
         UserAuthEntity userAuthEntity = userBusinessService.signout(authorization);

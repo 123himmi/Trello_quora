@@ -12,58 +12,58 @@ import javax.persistence.PersistenceContext;
 
 @Repository
 public class UserDao {
-  @PersistenceContext
-  private EntityManager entityManager;
-  @Autowired
-  private PasswordCryptographyProvider passwordCryptographyProvider;
+    @PersistenceContext
+    private EntityManager entityManager;
+    @Autowired
+    private PasswordCryptographyProvider passwordCryptographyProvider;
 
-  public UserEntity createUser(UserEntity userEntity) {
-    String[] encryptedText = passwordCryptographyProvider.encrypt(userEntity.getPassword());
-    userEntity.setSalt(encryptedText[0]);
-    userEntity.setPassword(encryptedText[1]);
-    entityManager.persist(userEntity);
-    return userEntity;
-  }
-
-  public UserEntity getUserByUserName(final String userName) {
-    try {
-      return entityManager.createNamedQuery("userByEmail", UserEntity.class).setParameter("userName", userName).getSingleResult();
-    } catch (NoResultException nre) {
-      return null;
+    public UserEntity createUser(UserEntity userEntity) {
+        String[] encryptedText = passwordCryptographyProvider.encrypt(userEntity.getPassword());
+        userEntity.setSalt(encryptedText[0]);
+        userEntity.setPassword(encryptedText[1]);
+        entityManager.persist(userEntity);
+        return userEntity;
     }
-  }
 
-  public UserEntity getUserByUuid(final String uuid) {
-    try {
-      return entityManager.createNamedQuery("userByUuid", UserEntity.class).setParameter("uuid", uuid).getSingleResult();
-    } catch (NoResultException nre) {
-      return null;
+    public UserEntity getUserByUserName(final String userName) {
+        try {
+            return entityManager.createNamedQuery("userByEmail", UserEntity.class).setParameter("userName", userName).getSingleResult();
+        } catch (NoResultException nre) {
+            return null;
+        }
     }
-  }
 
-  public UserAuthEntity createAuthToken(final UserAuthEntity userAuthEntity) {
-    entityManager.persist(userAuthEntity);
-    return userAuthEntity;
-  }
-
-  public void updateUser(final UserEntity updatedUserEntity) {
-    entityManager.merge(updatedUserEntity);
-  }
-
-  public UserAuthEntity getUserAuthByToken(final String accessToken) {
-    try {
-      return entityManager.createNamedQuery("userAuthTokenByAccessToken", UserAuthEntity.class).setParameter("accessToken", accessToken).getSingleResult();
-    } catch (NoResultException nre) {
-      return null;
+    public UserEntity getUserByUuid(final String uuid) {
+        try {
+            return entityManager.createNamedQuery("userByUuid", UserEntity.class).setParameter("uuid", uuid).getSingleResult();
+        } catch (NoResultException nre) {
+            return null;
+        }
     }
-  }
 
-  public void updateUserAuth(final UserAuthEntity updatedUserAuthEntity) {
-    entityManager.merge(updatedUserAuthEntity);
-  }
+    public UserAuthEntity createAuthToken(final UserAuthEntity userAuthEntity) {
+        entityManager.persist(userAuthEntity);
+        return userAuthEntity;
+    }
 
-  public void deleteUserByUuid(final UserEntity userEntity) {
-    entityManager.remove(userEntity);
-  }
+    public void updateUser(final UserEntity updatedUserEntity) {
+        entityManager.merge(updatedUserEntity);
+    }
+
+    public UserAuthEntity getUserAuthByToken(final String accessToken) {
+        try {
+            return entityManager.createNamedQuery("userAuthTokenByAccessToken", UserAuthEntity.class).setParameter("accessToken", accessToken).getSingleResult();
+        } catch (NoResultException nre) {
+            return null;
+        }
+    }
+
+    public void updateUserAuth(final UserAuthEntity updatedUserAuthEntity) {
+        entityManager.merge(updatedUserAuthEntity);
+    }
+
+    public void deleteUserByUuid(final UserEntity userEntity) {
+        entityManager.remove(userEntity);
+    }
 
 }

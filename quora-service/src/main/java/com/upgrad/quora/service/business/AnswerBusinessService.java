@@ -20,20 +20,30 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public class AnswerBusinessService
-    {
+public class AnswerBusinessService {
 
-        @Autowired
-        private UserDao userDao;
+    @Autowired
+    private UserDao userDao;
 
-        @Autowired
-        private QuestionDao questionDao;
+    @Autowired
+    private QuestionDao questionDao;
 
-        @Autowired
-        private AnswerDao answerDao;
+    @Autowired
+    private AnswerDao answerDao;
 
-        @Transactional(propagation = Propagation.REQUIRED)
-        public AnswerEntity createAnswer(final AnswerEntity answerEntity, final String questionId, final String authorization) throws AuthorizationFailedException, InvalidQuestionException {
+    /**
+     * creates an answer in the database.
+     *
+     * @param answerEntity  Contains the answer content.
+     * @param authorization To authenticate the user who is trying to create an answer.
+     * @param questionId    Id of the question for which the answer is being created.
+     * @return
+     * @throws AuthorizationFailedException ATHR-001 If the user has not signed in and ATHR-002 If the
+     *                                      * user is already signed out
+     * @throws InvalidQuestionException     QUES-001 if the question doesn't exist in database.
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public AnswerEntity createAnswer(final AnswerEntity answerEntity, final String questionId, final String authorization) throws AuthorizationFailedException, InvalidQuestionException {
         UserAuthEntity userAuthEntity = userDao.getUserAuthByToken(authorization);
 
         // Validate if user is signed in or not
@@ -60,8 +70,18 @@ public class AnswerBusinessService
         return answerDao.createAnswer(answerEntity);
     }
 
-        @Transactional(propagation = Propagation.REQUIRED)
-        public AnswerEntity editAnswerContent(final AnswerEntity answerEntity, final String authorization) throws AuthorizationFailedException, AnswerNotFoundException {
+    /**
+     * edits the answer which already exist in the database.
+     *
+     * @param authorization To authenticate the user who is trying to edit the answer.
+     * @param answerEntity  Id of the answer entity which is to be edited.
+     * @return
+     * @throws AnswerNotFoundException      ANS-001 if the answer is not found in the database.
+     * @throws AuthorizationFailedException ATHR-001 If the user has not signed in and ATHR-002 If the
+     *                                      * user is already signed out and ATHR-003 if the user is not the owner of the answer.
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public AnswerEntity editAnswerContent(final AnswerEntity answerEntity, final String authorization) throws AuthorizationFailedException, AnswerNotFoundException {
         UserAuthEntity userAuthEntity = userDao.getUserAuthByToken(authorization);
 
         // Validate if user is signed in or not
@@ -94,8 +114,17 @@ public class AnswerBusinessService
         return answerDao.editAnswerContent(answerEntity);
     }
 
-        @Transactional(propagation = Propagation.REQUIRED)
-        public void deleteAnswer(final String answerId, final String authorization) throws AuthorizationFailedException, AnswerNotFoundException {
+    /**
+     * delete the answer
+     *
+     * @param answerId      id of the answer to be deleted.
+     * @param authorization accessToken of the user for valid authentication.
+     * @throws AuthorizationFailedException ATHR-001 - if User has not signed in. ATHR-002 if the User
+     *                                      is signed out. ATHR-003 if non admin or non owner of the answer tries to delete the answer.
+     * @throws AnswerNotFoundException      if the answer with id doesn't exist.
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void deleteAnswer(final String answerId, final String authorization) throws AuthorizationFailedException, AnswerNotFoundException {
         UserAuthEntity userAuthEntity = userDao.getUserAuthByToken(authorization);
 
         // Validate if user is signed in or not
@@ -110,11 +139,11 @@ public class AnswerBusinessService
 
         // Validate if requested answer exist or not
         if (answerDao.getAnswerByUuid(answerId) == null) {
-            throw new AnswerNotFoundException("ANS-001","Entered answer uuid does not exist");
+            throw new AnswerNotFoundException("ANS-001", "Entered answer uuid does not exist");
         }
 
         // Validate if current user is the owner of requested answer or the role of user is not nonadmin
-        if(!userAuthEntity.getUser().getUuid().equals(answerDao.getAnswerByUuid(answerId).getUser().getUuid())){
+        if (!userAuthEntity.getUser().getUuid().equals(answerDao.getAnswerByUuid(answerId).getUser().getUuid())) {
             if (userAuthEntity.getUser().getRole().equals("nonadmin")) {
                 throw new AuthorizationFailedException("ATHR-003", "Only the answer owner or admin can delete the answer");
             }
@@ -123,8 +152,18 @@ public class AnswerBusinessService
         answerDao.userAnswerDelete(answerId);
     }
 
-        @Transactional(propagation = Propagation.REQUIRED)
-        public List<AnswerEntity> getAllAnswersToQuestion(final String questionId, final String authorization) throws AuthorizationFailedException, InvalidQuestionException {
+    /**
+     * get all the answers for a question
+     *
+     * @param questionId    id of the question to fetch the answers.
+     * @param authorization accessToken of the user for valid authentication.
+     * @throws AuthorizationFailedException ATHR-001 - if User has not signed in. ATHR-002 if the User
+     *                                      is signed out.
+     * @throws InvalidQuestionException     The question with entered uuid whose details are to be seen
+     *                                      does not exist.
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public List<AnswerEntity> getAllAnswersToQuestion(final String questionId, final String authorization) throws AuthorizationFailedException, InvalidQuestionException {
         UserAuthEntity userAuthEntity = userDao.getUserAuthByToken(authorization);
 
         // Validate if user is signed in or not
@@ -144,4 +183,4 @@ public class AnswerBusinessService
 
         return answerDao.getAllAnswersToQuestion(questionId);
     }
-    }
+}
