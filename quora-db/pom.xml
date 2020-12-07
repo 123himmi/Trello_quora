@@ -13,7 +13,7 @@
 
     <properties>
         <sql-maven-plugin.version>1.5</sql-maven-plugin.version>
-        <postgresql.driver.version>42.2.2</postgresql.driver.version>
+        <postgresql.driver.version>42.2.5</postgresql.driver.version>
         <postgresql.driver.name>org.postgresql.Driver</postgresql.driver.name>
         <sql.path>${basedir}/src/main/resources/sql</sql.path>
     </properties>
@@ -79,9 +79,9 @@
 
                 <configuration>
                     <driver>${postgresql.driver.name}</driver>
-                    <url>jdbc:postgresql://${server.host}:${server.port}/${database.name}</url>
-                    <username>${database.user}</username>
-                    <password>${database.password}</password>
+                    <url>jdbc:postgresql://localhost:5432/postgres</url>
+                    <username>postgres</username>
+                    <password>postgres</password>
                     <autocommit>true</autocommit>
                     <onError>abort</onError>
                 </configuration>
