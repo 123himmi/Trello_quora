@@ -40,7 +40,7 @@
         "summary": "userProfile",
         "description": "A user who needs to get the details of the other user\n",
         "produces": [
-          "/json"
+          "application/json"
         ],
         "parameters": [
           {

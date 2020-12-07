@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="quora@localhost" uuid="25fb1f91-2161-4bf4-9e2a-3b72ef18cb9f">
+    <data-source name="quora@localhost" uuid="39353f1b-2089-4f58-b6a7-c49ade61bd5c">
       <database-info product="PostgreSQL" version="13.0" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="13.0" exact-driver-version="42.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="quora" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="quora-api/Hibernate" uuid="2d2405d7-abf3-49d5-b25d-72e0272be73b">
+      <database-info product="PostgreSQL" version="13.0" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="13.0" exact-driver-version="42.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <user-name>postgres</user-name>
       <schema-mapping>
         <introspection-scope>

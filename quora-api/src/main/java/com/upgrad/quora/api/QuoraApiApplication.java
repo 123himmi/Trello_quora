@@ -15,5 +15,5 @@ public class QuoraApiApplication {
     public static void main(String[] args) {
         SpringApplication.run(QuoraApiApplication.class, args);
     }
-
 }
+

@@ -22,30 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47a15d9d-c79e-46a9-bbbf-df38ac55657d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/AnswerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/dao/AnswerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/dao/QuestionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/entity/QuestionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/entity/UserAuthEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quora-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/config/SwaggerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/config/SwaggerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quora-api/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quora-api/src/main/resources/endpoints/common.json" beforeDir="false" afterPath="$PROJECT_DIR$/quora-api/src/main/resources/endpoints/common.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quora-db/src/main/resources/config/localhost.properties" beforeDir="false" afterPath="$PROJECT_DIR$/quora-db/src/main/resources/config/localhost.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quora-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quora-service/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="47a15d9d-c79e-46a9-bbbf-df38ac55657d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,13 +33,12 @@
   </component>
   <component name="DatabaseLocalColorSettings">
     <colors>
-      <entry key="25fb1f91-2161-4bf4-9e2a-3b72ef18cb9f" value="Orange" />
+      <entry key="39353f1b-2089-4f58-b6a7-c49ade61bd5c" value="Green" />
     </colors>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit3 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -77,71 +53,43 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1l5gPwEQdrzQjJjgFxX4IbNLWMy" />
+  <component name="ProjectId" id="1lHkmTbuU7EvUqyrNmLgEyj3F8y" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
-    <property name="JPA.DatabaseSchemaImportDialog" value="1d042117-908c-4158-8cda-73b6d728e0f6" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="yaml&#9;FILE&#9;file://E:/Trello_quora/quora_solution/Trello_quora/quora-api/src/main/resources/application.yaml&#10;quora&#9;FILE&#9;file://E:/Trello_quora/quora_solution/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java&#10;quoraapi&#9;FILE&#9;file://E:/Trello_quora/26thsepquora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java&#10;.yaml&#9;FILE&#9;file://E:/Trello_quora/26thsepquora/Trello_quora/quora-api/src/main/resources/application.yaml&#10;userco&#9;FILE&#9;file://E:/Trello_quora/26thsepquora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java&#10;userau&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/UserAuthEntity.java&#10;userentity&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/UserEntity.java&#10;commond&#9;PSI&#9;JAVA://com.upgrad.quora.service.dao.CommonDao&#10;userdao&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/UserDao.java&#10;userc&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java&#10;quora-api&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-api/pom.xml&#10;answere&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/AnswerEntity.java&#10;.json&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-api/src/main/resources/endpoints/quora.json&#10;usere&#9;FILE&#9;file://E:/Trello_quora/Trello_quora_solution/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/UserEntity.java&#10;userd&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/UserDao.java&#10;quoraap&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java&#10;answer&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/test/java/com/upgrad/quora/api/controller/AnswerControllerTest.java&#10;question&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/test/java/com/upgrad/quora/api/controller/QuestionControllerTest.java&#10;common&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/test/java/com/upgrad/quora/api/controller/CommonControllerTest.java&#10;admincon&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/test/java/com/upgrad/quora/api/controller/AdminControllerTest.java&#10;appli&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java&#10;answercontro&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/controller/AnswerController.java&#10;adminte&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/test/java/com/upgrad/quora/api/controller/AdminControllerTest.java&#10;admin&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/test/java/com/upgrad/quora/api/controller/AdminControllerTest.java&#10;userbu&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/UserBusinessService.java&#10;.sql&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-db/src/main/resources/sql/quora.sql&#10;admins&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/AdminBusinessService.java&#10;userauth&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/UserAuthEntity.java&#10;questione&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/QuestionEntity.java&#10;answeren&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/AnswerEntity.java&#10;adminc&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/controller/AdminController.java&#10;app&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java&#10;answerda&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/AnswerDao.java&#10;commonbusines&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/CommonBusinessService.java&#10;questionda&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/QuestionDao.java&#10;admindao&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/AdminDao.java&#10;application&#9;FILE&#9;file://E:/Trello_quora/Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/QuoraApiApplication.java&#10;applicat&#9;PSI&#9;JAVA://com.upgrad.quora.api.QuoraApiApplication&#10;quora.sql&#9;FILE&#9;file://E:/Trello_quora/quora-db/src/main/resources/sql/quora.sql&#10;answerdao&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/AnswerDao.java&#10;answerServ&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/AnswerBusinessService.java&#10;questionser&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/QuestionBusinessService.java&#10;commondao&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/dao/CommonDao.java&#10;commonbusiness&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/CommonBusinessService.java&#10;adminservice&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/AdminBusinessService.java&#10;userbusinessser&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/UserBusinessService.java&#10;userservice&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/UserBusinessService.java&#10;entity&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/UserEntity.java&#10;adminser&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/business/AdminBusinessService.java&#10;usera&#9;FILE&#9;file://E:/Trello_quora/quora-service/src/main/java/com/upgrad/quora/service/entity/UserAuthEntity.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538752844056" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
-    <property name="last_opened_file_path" value="C:/Program Files/Java/jre1.8.0_251" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.6643678" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="" />
-      <recent name="src" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.upgrad.quora.api.controller" />
+      <recent name="com.upgrad.quora.service.business" />
+      <recent name="com.upgrad.quora.service.dao" />
       <recent name="com.upgrad.quora.service.entity" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="junit.framework.TestCase" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Trello_quora\quora-api\src\main\resources\endpoints" />
       <recent name="E:\Trello_quora\quora-api\src\main\resources" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\UpGrad\Course 5 Project - Social Q&amp;A web-app\quora_stub_Master\Trello_quora_AnswerC\quora-api\target\generated-sources" />
-      <recent name="D:\UpGrad\Course 5 Project - Social Q&amp;A web-app\quora_stub_Master\Trello_quora_AnswerC\quora-api\target\generated-sources\com.upgrad.quora.api.model" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.upgrad.quora.api.model" />
-    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.QuoraApiApplication">
-    <configuration name="QuoraApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.upgrad.quora.api.QuoraApiApplication" />
-      <module name="quora-api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.upgrad.quora.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -170,6 +118,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CommonControllerTest.detailsOfNonExistingUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="quora-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.upgrad.quora.api.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.upgrad.quora.api.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.upgrad.quora.api.controller.CommonControllerTest" />
+      <option name="METHOD_NAME" value="detailsOfNonExistingUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QuestionControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="quora-api" />
       <extension name="coverage">
@@ -185,7 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.signoutWithNonExistingAccessToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="quora-api" />
       <extension name="coverage">
         <pattern>
@@ -195,7 +159,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.upgrad.quora.api.controller" />
       <option name="MAIN_CLASS_NAME" value="com.upgrad.quora.api.controller.UserControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="signoutWithNonExistingAccessToken" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -214,19 +179,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.QuoraApiApplication" />
       <item itemvalue="JUnit.AnswerControllerTest" />
+      <item itemvalue="JUnit.CommonControllerTest.detailsOfNonExistingUser" />
       <item itemvalue="JUnit.QuestionControllerTest" />
-      <item itemvalue="JUnit.UserControllerTest" />
+      <item itemvalue="JUnit.UserControllerTest.signoutWithNonExistingAccessToken" />
       <item itemvalue="Spring Boot.QuoraApiApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.QuoraApiApplication" />
-        <item itemvalue="Application.QuoraApiApplication" />
-        <item itemvalue="JUnit.AnswerControllerTest" />
-        <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.UserControllerTest.signoutWithNonExistingAccessToken" />
         <item itemvalue="JUnit.QuestionControllerTest" />
+        <item itemvalue="JUnit.CommonControllerTest.detailsOfNonExistingUser" />
+        <item itemvalue="JUnit.AnswerControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -259,14 +224,12 @@
       <workItem from="1538634479950" duration="3217000" />
       <workItem from="1538642827225" duration="1059000" />
       <workItem from="1538723860955" duration="5425000" />
-      <workItem from="1606892348322" duration="19384000" />
-      <workItem from="1607018004187" duration="10827000" />
-      <workItem from="1607044781813" duration="6343000" />
-      <workItem from="1607066322640" duration="162000" />
-      <workItem from="1607066503230" duration="5025000" />
-      <workItem from="1607146364417" duration="13620000" />
-      <workItem from="1607164548435" duration="8654000" />
-      <workItem from="1607196611349" duration="5631000" />
+      <workItem from="1607261565232" duration="617000" />
+      <workItem from="1607262203098" duration="1393000" />
+      <workItem from="1607263628675" duration="584000" />
+      <workItem from="1607264232487" duration="5735000" />
+      <workItem from="1607277084090" duration="3309000" />
+      <workItem from="1607318155595" duration="9395000" />
     </task>
     <servers />
   </component>
@@ -286,138 +249,90 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="668" y="304" width="683" height="216" key="#Assign_Data_Sources" timestamp="1607196846440">
+    <state x="668" y="304" key="#Assign_Data_Sources" timestamp="1607264209588">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="668" y="304" width="683" height="216" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1607196846440" />
-    <state x="395" y="91" key="#Inspections" timestamp="1607146603213">
+    <state x="668" y="304" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1607264209588" />
+    <state x="206" y="254" key="#SQL_Dialects" timestamp="1607264023160">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1607146603213" />
-    <state x="249" y="0" key="#Project_Structure" timestamp="1607195947953">
+    <state x="206" y="254" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1607264023160" />
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607264270591">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1607195947953" />
-    <state x="206" y="254" key="#SQL_Dialects" timestamp="1607067463200">
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1607264270591" />
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1607268211277">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="206" y="254" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1607067463200" />
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607196823766">
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1607268211277" />
+    <state width="442" height="466" key="DebuggerActiveHint" timestamp="1607325620251">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1607196823766" />
-    <state x="508" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606977875543">
+    <state width="442" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1607325620251" />
+    <state width="1493" height="96" key="GridCell.Tab.0.bottom" timestamp="1607333322876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="508" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1606977875543" />
-    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1606949010321">
+    <state width="1493" height="96" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607333322876" />
+    <state width="1493" height="96" key="GridCell.Tab.0.center" timestamp="1607333322876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606949010321" />
-    <state x="498" y="208" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1607195298374">
+    <state width="1493" height="96" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607333322876" />
+    <state width="1493" height="96" key="GridCell.Tab.0.left" timestamp="1607333322876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="208" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1607195298374" />
-    <state x="439" y="143" width="657" height="569" key="#com.intellij.jpa.generation.ui.DatabaseSchemaImportDialog" timestamp="1607195320381">
+    <state width="1493" height="96" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607333322876" />
+    <state width="1493" height="96" key="GridCell.Tab.0.right" timestamp="1607333322876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="439" y="143" width="657" height="569" key="#com.intellij.jpa.generation.ui.DatabaseSchemaImportDialog/0.0.1536.824@0.0.1536.824" timestamp="1607195320381" />
-    <state x="439" y="211" key="#com.intellij.jpa.generation.ui.ImportMappingsDialog" timestamp="1607195407847">
+    <state width="1493" height="96" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607333322876" />
+    <state width="1493" height="96" key="GridCell.Tab.1.bottom" timestamp="1607333322876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="439" y="211" key="#com.intellij.jpa.generation.ui.ImportMappingsDialog/0.0.1536.824@0.0.1536.824" timestamp="1607195407847" />
-    <state x="516" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1607195334931">
+    <state width="1493" height="96" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607333322876" />
+    <state width="1493" height="96" key="GridCell.Tab.1.center" timestamp="1607333322876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="516" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1607195334931" />
-    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1607195630462">
+    <state width="1493" height="96" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607333322876" />
+    <state width="1493" height="96" key="GridCell.Tab.1.left" timestamp="1607333322876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1536.824@0.0.1536.824" timestamp="1607195630462" />
-    <state x="100" y="100" width="1336" height="624" key="DiffContextDialog" timestamp="1607150206066">
+    <state width="1493" height="96" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607333322876" />
+    <state width="1493" height="96" key="GridCell.Tab.1.right" timestamp="1607333322876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="100" y="100" width="1336" height="624" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1607150206066" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607203863517">
+    <state width="1493" height="96" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607333322876" />
+    <state width="1493" height="96" key="GridCell.Tab.2.bottom" timestamp="1607333322877">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607203863517" />
-    <state width="1493" height="487" key="GridCell.Tab.0.bottom" timestamp="1607203922745">
+    <state width="1493" height="96" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607333322877" />
+    <state width="1493" height="96" key="GridCell.Tab.2.center" timestamp="1607333322877">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="487" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607203922745" />
-    <state width="1493" height="487" key="GridCell.Tab.0.center" timestamp="1607203922745">
+    <state width="1493" height="96" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1607333322877" />
+    <state width="1493" height="96" key="GridCell.Tab.2.left" timestamp="1607333322876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="487" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607203922745" />
-    <state width="1493" height="487" key="GridCell.Tab.0.left" timestamp="1607203922745">
+    <state width="1493" height="96" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1607333322876" />
+    <state width="1493" height="96" key="GridCell.Tab.2.right" timestamp="1607333322877">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="487" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607203922745" />
-    <state width="1493" height="487" key="GridCell.Tab.0.right" timestamp="1607203922745">
+    <state width="1493" height="96" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1607333322877" />
+    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1607263878259">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="487" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607203922745" />
-    <state width="1493" height="487" key="GridCell.Tab.1.bottom" timestamp="1607203922745">
+    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1607263878259" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1607263778086">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="487" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607203922745" />
-    <state width="1493" height="487" key="GridCell.Tab.1.center" timestamp="1607203922745">
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607263778086" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607333207970">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="487" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1607203922745" />
-    <state width="1493" height="487" key="GridCell.Tab.1.left" timestamp="1607203922745">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607333207970" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607333356706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="487" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1607203922745" />
-    <state width="1493" height="487" key="GridCell.Tab.1.right" timestamp="1607203922745">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="487" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1607203922745" />
-    <state width="1478" height="82" key="GridCell.Tab.2.bottom" timestamp="1607152218573">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="82" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607152218573" />
-    <state width="1478" height="82" key="GridCell.Tab.2.center" timestamp="1607152218573">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="82" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1607152218573" />
-    <state width="1478" height="82" key="GridCell.Tab.2.left" timestamp="1607152218573">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="82" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1607152218573" />
-    <state width="1478" height="82" key="GridCell.Tab.2.right" timestamp="1607152218573">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1478" height="82" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1607152218573" />
-    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1607146691271">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1607146691271" />
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1606975647856">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1606975647856" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1607203872666">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1607203872666" />
-    <state x="584" y="190" key="chooseDestDirectoryDialog" timestamp="1606982034003">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="584" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1606982034003" />
-    <state x="540" y="102" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1607193770758">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="540" y="102" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1607193770758" />
-    <state x="214" y="148" width="1107" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1607152031789">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="214" y="148" width="1107" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1607152031789" />
-    <state x="478" y="116" width="633" height="622" key="find.popup" timestamp="1607200864749">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="478" y="116" width="633" height="622" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1607200864749" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1607333356706" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -427,14 +342,81 @@
           <line>89</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="org.springframework.beans.factory.UnsatisfiedDependencyException" package="org.springframework.beans.factory" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="org.springframework.beans.factory.BeanCreationException" package="org.springframework.beans.factory" />
-          <option name="timeStamp" value="3" />
-        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/AdminBusinessService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/dao/UserDao.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/AdminBusinessService.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-service/src/main/java/com/upgrad/quora/service/business/AdminBusinessService.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/quora-api/src/main/java/com/upgrad/quora/api/controller/UserController.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

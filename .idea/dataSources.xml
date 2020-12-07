@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="quora@localhost" uuid="25fb1f91-2161-4bf4-9e2a-3b72ef18cb9f">
+    <data-source source="LOCAL" name="quora@localhost" uuid="39353f1b-2089-4f58-b6a7-c49ade61bd5c">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/quora</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="quora-api/Hibernate" uuid="2d2405d7-abf3-49d5-b25d-72e0272be73b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate</remarks>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/quora</jdbc-url>
     </data-source>
