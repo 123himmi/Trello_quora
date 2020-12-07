@@ -10,6 +10,10 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import com.upgrad.quora.service.exception.AuthorizationFailedException;
+import com.upgrad.quora.service.exception.UserNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.time.ZonedDateTime;
 import java.util.UUID;
@@ -18,7 +22,11 @@ import java.util.UUID;
 public class UserBusinessService {
 
   @Autowired
+  private AdminBusinessService adminBusinessService;
+
+  @Autowired
   private UserDao userDao;
+  
   @Autowired
   private PasswordCryptographyProvider passwordCryptographyProvider;
 
@@ -76,6 +84,8 @@ public class UserBusinessService {
   public UserAuthEntity getUserByToken(final String accessToken) throws AuthorizationFailedException {
     UserAuthEntity userAuthEntity= userDao.getUserAuthByToken(accessToken);
 
+ 
+
     if(userAuthEntity == null) {
       throw new AuthorizationFailedException("ATHR-001", "User has not signed in");
     }
@@ -88,7 +98,9 @@ public class UserBusinessService {
   }
 
   public UserEntity getUserById(final String userUuid) throws UserNotFoundException {
+
     UserEntity userEntity = userDao.getUserByUuid(userUuid);
+
 
     if(userEntity == null) {
       throw new UserNotFoundException("USR-001", "User with entered uuid does not exist");
