@@ -15,6 +15,13 @@ public class CommonService {
     @Autowired
     private UserDao userDao;
 
+    /**
+     * This method checks if the user profile .
+     *
+     * @param authorization token to be validated.
+     * @throws AuthorizationFailedException ATHR-001 if the token doesn't exit in the DB , ATHR-002 if
+     *                                      the user has already logged out using the token.
+     */
     public UserEntity userProfile(final String authorization, final String userId) throws AuthorizationFailedException, UserNotFoundException {
         UserAuthEntity userAuthEntity = userDao.getUserAuthByToken(AuthTokenParser.parseAuthToken(authorization));
         if (userAuthEntity == null) {

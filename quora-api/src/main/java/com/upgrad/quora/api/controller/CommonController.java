@@ -19,6 +19,15 @@ public class CommonController {
     @Autowired
     private CommonService commonService;
 
+    /**
+     * Get the user details provided the userId.
+     *
+     * @param authorization Access token to authenticate the user who is requesting for user details.
+     * @param userId        user id of the user whose details has to be fetched.
+     * @return
+     * @throws AuthorizationFailedException - if the access token is invalid or already logged out.
+     * @throws UserNotFoundException        - if the user with given id is not present in the records.
+     */
     @RequestMapping(path = "/userprofile/{userId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<UserDetailsResponse> userProfile(@RequestHeader("authorization") final String authorization, @PathVariable(name = "userId") final String userId) throws AuthorizationFailedException, UserNotFoundException {
         UserEntity userEntity = commonService.userProfile(authorization, userId);

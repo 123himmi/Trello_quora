@@ -16,8 +16,19 @@ import org.springframework.web.bind.annotation.*;
 public class AdminController {
     @Autowired
     private AdminBusinessService adminBisnessService;
+
+    /**
+     * Get the user details provided the userId.
+     *
+     * @param userId        user id of the user whose details has to be fetched.
+     * @param authorization Access token to authenticate the user who is requesting for user details.
+     * @return
+     * @throws AuthorizationFailedException - if the access token is invalid or already logged out or
+     *                                      user is not an admin or user with enetered uuid does not exist
+     * @throws UserNotFoundException        - if the user with given id is not present in the records.
+     */
     @RequestMapping(path = "/admin/user/{userId}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<UserDeleteResponse> userDelete(@RequestHeader(name = "authorization") final String authorization, @PathVariable(name="userId") final String userId) throws AuthorizationFailedException, UserNotFoundException {
+    public ResponseEntity<UserDeleteResponse> userDelete(@RequestHeader(name = "authorization") final String authorization, @PathVariable(name = "userId") final String userId) throws AuthorizationFailedException, UserNotFoundException {
         UserEntity userEntity = adminBisnessService.userDelete(authorization, userId);
         UserDeleteResponse userDeleteResponse = new UserDeleteResponse().id(userEntity.getUuid()).status("USER SUCCESSFULLY DELETED");
         return new ResponseEntity<UserDeleteResponse>(userDeleteResponse, HttpStatus.OK);

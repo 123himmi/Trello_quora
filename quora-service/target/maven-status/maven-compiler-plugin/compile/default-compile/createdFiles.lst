@@ -10,7 +10,9 @@ com\upgrad\quora\service\business\AuthenticationService.class
 com\upgrad\quora\service\dao\AnswerDao.class
 com\upgrad\quora\service\entity\AnswerEntity.class
 com\upgrad\quora\service\business\AdminBusinessService.class
+com\upgrad\quora\service\common\AuthTokenParser.class
 com\upgrad\quora\service\exception\SignOutRestrictedException.class
+com\upgrad\quora\service\business\CommonService.class
 com\upgrad\quora\service\business\UserBusinessService.class
 com\upgrad\quora\service\common\ErrorCode.class
 com\upgrad\quora\service\dao\QuestionDao.class
