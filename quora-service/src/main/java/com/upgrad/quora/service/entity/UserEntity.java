@@ -1,8 +1,9 @@
 package com.upgrad.quora.service.entity;
 
-import org.apache.commons.lang3.builder.*;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -11,99 +12,74 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
-@NamedQueries(
-        {
-                @NamedQuery(name = "userByUserName", query = "select ue from UserEntity ue where ue.userName = :userName"),
-                @NamedQuery(name = "userByEmail", query = "select ue from UserEntity ue where ue.email = :email"),
-                @NamedQuery(name = "userByUuid", query = "select ue from UserEntity ue where ue.uuid = :uuid"),
-                @NamedQuery(name = "deleteUserByUuid", query="delete from UserEntity ue where ue.uuid = :uuid"),
-        }
-)
+@NamedQueries({
+        @NamedQuery(name = "userByEmail", query = "select u from UserEntity u where u.userName = :userName"),
+        @NamedQuery(name = "userByUuid", query = "select u from UserEntity u where u.uuid = :uuid")
+})
 public class UserEntity implements Serializable {
 
   @Id
-  @Column(name = "id")
+  @Column(name = "ID")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;
+  private Integer id;
 
-  @Column(name = "uuid")
-  @NotNull
-  @OnDelete(action = OnDeleteAction.CASCADE)
-  @Size(max = 200)
+  @Column(name = "UUID")
+  @Size(max = 64)
   private String uuid;
 
-  @Column(name = "firstname")
-  @NotNull
-  @Size(max = 30)
-  private String firstName;
-
-  @Column(name = "lastname")
-  @NotNull
-  @Size(max = 30)
-  private String lastName;
-
-  @Column(name = "username")
-  @NotNull
-  @Size(max = 30)
-  private String userName;
-
-  @Column(name = "email")
-  @NotNull
-  @Size(max = 50)
-  private String email;
-
-  @Column(name = "password")
-  @ToStringExclude
-  @NotNull
-  @Size(max = 255)
-  private String password;
-
-  @Column(name = "salt")
-  @ToStringExclude
+  @Column(name = "FIRSTNAME")
   @NotNull
   @Size(max = 200)
-  private String salt;
+  private String firstName;
 
-  @Column(name = "country")
-  @Size(max = 30)
-  private String country;
+  @Column(name = "LASTNAME")
+  @NotNull
+  @Size(max = 200)
+  private String lastName;
 
-  @Column(name = "aboutme")
-  @Size(max = 50)
-  private String aboutMe;
+  @Column(name = "USERNAME")
+  @NotNull
+  @Size(max = 200)
+  private String userName;
 
-  @Column(name = "dob")
-  @Size(max = 30)
-  private String dob;
-
-  @Column(name = "role")
-  @Size(max = 30)
+  @Column(name = "ROLE")
   private String role;
 
-  @Column(name = "contactnumber")
-  @Size(max = 30)
+  @Column(name = "EMAIL")
+  @NotNull
+  @Size(max = 200)
+  private String emailAddress;
+
+  //@ToStringExclude
+  @Column(name = "PASSWORD")
+  private String password;
+
+  @Column(name = "COUNTRY")
+  private String country;
+
+  @Column(name = "ABOUTME")
+  private String aboutMe;
+
+  @Column(name = "DOB")
+  private String dob;
+
+
+  @Column(name = "CONTACTNUMBER")
+  @NotNull
+  @Size(max = 50)
   private String contactNumber;
 
-  @Override
-  public boolean equals(Object obj) {
-    return new EqualsBuilder().append(this, obj).isEquals();
-  }
+  @Column(name = "SALT")
+  @NotNull
+  @Size(max = 200)
+  //@ToStringExclude
+  private String salt;
 
-  @Override
-  public int hashCode() {
-    return new HashCodeBuilder().append(this).hashCode();
-  }
-
-  @Override
-  public String toString() {
-    return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
-  }
-
-  public long getId() {
+  public Integer getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(Integer id) {
     this.id = id;
   }
 
@@ -139,12 +115,12 @@ public class UserEntity implements Serializable {
     this.userName = userName;
   }
 
-  public String getEmail() {
-    return email;
+  public String getEmailAddress() {
+    return emailAddress;
   }
 
-  public void setEmail(String email) {
-    this.email = email;
+  public void setEmailAddress(String emailAddress) {
+    this.emailAddress = emailAddress;
   }
 
   public String getPassword() {
@@ -153,14 +129,6 @@ public class UserEntity implements Serializable {
 
   public void setPassword(String password) {
     this.password = password;
-  }
-
-  public String getSalt() {
-    return salt;
-  }
-
-  public void setSalt(String salt) {
-    this.salt = salt;
   }
 
   public String getCountry() {
@@ -187,6 +155,23 @@ public class UserEntity implements Serializable {
     this.dob = dob;
   }
 
+  public String getContactNumber() {
+    return contactNumber;
+  }
+
+  public void setContactNumber(String contactNumber) {
+    this.contactNumber = contactNumber;
+  }
+
+
+  public String getSalt() {
+    return salt;
+  }
+
+  public void setSalt(String salt) {
+    this.salt = salt;
+  }
+
   public String getRole() {
     return role;
   }
@@ -194,12 +179,19 @@ public class UserEntity implements Serializable {
   public void setRole(String role) {
     this.role = role;
   }
-
-  public String getContactNumber() {
-    return contactNumber;
+  @Override
+  public boolean equals(Object obj) {
+    return new EqualsBuilder().append(this, obj).isEquals();
   }
 
-  public void setContactNumber(String contactNumber) {
-    this.contactNumber = contactNumber;
+
+  @Override
+  public int hashCode() {
+    return new HashCodeBuilder().append(this).hashCode();
+  }
+
+  @Override
+  public String toString() {
+    return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
   }
 }

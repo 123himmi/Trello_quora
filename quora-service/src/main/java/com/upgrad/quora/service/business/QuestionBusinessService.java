@@ -65,7 +65,7 @@ public class QuestionBusinessService {
 
     QuestionEntity question = getQuestionById(uuid);
     UserAuthEntity userAuthEntity = userBusinessService.getUserByToken(accessToken);
-    String userRole = userAuthEntity.getUserId().getRole();
+    String userRole = userAuthEntity.getUser().getRole();
 
     if(isUIdMatch(userAuthEntity, question) ||
             userRole.equals("admin")) {
@@ -77,7 +77,7 @@ public class QuestionBusinessService {
   }
 
   private Boolean isUIdMatch(UserAuthEntity userAuthEntity, QuestionEntity questionEntity) throws AuthorizationFailedException {
-    if(questionEntity.getUserId().getUuid().equals(userAuthEntity.getUserId().getUuid()))
+    if(questionEntity.getUserId().getUuid().equals(userAuthEntity.getUser().getUuid()))
       return true;
     else
       return false;

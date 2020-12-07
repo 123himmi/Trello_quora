@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 /**
  * SignOutRestrictedException is thrown when a user is not signed in the application and tries to sign out of the application.
  */
+
 public class SignOutRestrictedException extends Exception {
     private final String code;
     private final String errorMessage;

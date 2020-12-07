@@ -48,7 +48,7 @@ public class QuestionController {
     questionEntity.setUuid(UUID.randomUUID().toString());
     questionEntity.setContent(questionRequest.getContent());
     questionEntity.setDate(ZonedDateTime.now());
-    questionEntity.setUserId(userAuthEntity.getUserId());
+    questionEntity.setUserId(userAuthEntity.getUser());
 
     QuestionEntity question = questionBusinessService.createQuestion(questionEntity);
 

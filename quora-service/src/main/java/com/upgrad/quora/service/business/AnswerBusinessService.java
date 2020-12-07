@@ -34,7 +34,7 @@ public class AnswerBusinessService
 
         @Transactional(propagation = Propagation.REQUIRED)
         public AnswerEntity createAnswer(final AnswerEntity answerEntity, final String questionId, final String authorization) throws AuthorizationFailedException, InvalidQuestionException {
-        UserAuthEntity userAuthEntity = userDao.getUserAuthToken(authorization);
+        UserAuthEntity userAuthEntity = userDao.getUserAuthByToken(authorization);
 
         // Validate if user is signed in or not
         if (userAuthEntity == null) {
@@ -54,7 +54,7 @@ public class AnswerBusinessService
 
         answerEntity.setUuid(UUID.randomUUID().toString());
         answerEntity.setDate(ZonedDateTime.now());
-        answerEntity.setUser(userAuthEntity.getUserId());
+        answerEntity.setUser(userAuthEntity.getUser());
         answerEntity.setQuestion(questionEntity);
 
         return answerDao.createAnswer(answerEntity);
@@ -62,7 +62,7 @@ public class AnswerBusinessService
 
         @Transactional(propagation = Propagation.REQUIRED)
         public AnswerEntity editAnswerContent(final AnswerEntity answerEntity, final String authorization) throws AuthorizationFailedException, AnswerNotFoundException {
-        UserAuthEntity userAuthEntity = userDao.getUserAuthToken(authorization);
+        UserAuthEntity userAuthEntity = userDao.getUserAuthByToken(authorization);
 
         // Validate if user is signed in or not
         if (userAuthEntity == null) {
@@ -81,7 +81,7 @@ public class AnswerBusinessService
         }
 
         // Validate if current user is the owner of requested answer
-        UserEntity currentUser = userAuthEntity.getUserId();
+        UserEntity currentUser = userAuthEntity.getUser();
         UserEntity answerOwner = answerDao.getAnswerByUuid(answerEntity.getUuid()).getUser();
         if (currentUser.getId() != answerOwner.getId()) {
             throw new AuthorizationFailedException("ATHR-003", "Only the answer owner can edit the answer");
@@ -96,7 +96,7 @@ public class AnswerBusinessService
 
         @Transactional(propagation = Propagation.REQUIRED)
         public void deleteAnswer(final String answerId, final String authorization) throws AuthorizationFailedException, AnswerNotFoundException {
-        UserAuthEntity userAuthEntity = userDao.getUserAuthToken(authorization);
+        UserAuthEntity userAuthEntity = userDao.getUserAuthByToken(authorization);
 
         // Validate if user is signed in or not
         if (userAuthEntity == null) {
@@ -114,8 +114,8 @@ public class AnswerBusinessService
         }
 
         // Validate if current user is the owner of requested answer or the role of user is not nonadmin
-        if(!userAuthEntity.getUserId().getUuid().equals(answerDao.getAnswerByUuid(answerId).getUser().getUuid())){
-            if (userAuthEntity.getUserId().getRole().equals("nonadmin")) {
+        if(!userAuthEntity.getUser().getUuid().equals(answerDao.getAnswerByUuid(answerId).getUser().getUuid())){
+            if (userAuthEntity.getUser().getRole().equals("nonadmin")) {
                 throw new AuthorizationFailedException("ATHR-003", "Only the answer owner or admin can delete the answer");
             }
         }
@@ -125,7 +125,7 @@ public class AnswerBusinessService
 
         @Transactional(propagation = Propagation.REQUIRED)
         public List<AnswerEntity> getAllAnswersToQuestion(final String questionId, final String authorization) throws AuthorizationFailedException, InvalidQuestionException {
-        UserAuthEntity userAuthEntity = userDao.getUserAuthToken(authorization);
+        UserAuthEntity userAuthEntity = userDao.getUserAuthByToken(authorization);
 
         // Validate if user is signed in or not
         if (userAuthEntity == null) {
