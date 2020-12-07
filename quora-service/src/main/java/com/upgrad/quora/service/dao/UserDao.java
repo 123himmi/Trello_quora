@@ -1,7 +1,9 @@
 package com.upgrad.quora.service.dao;
 
+import com.upgrad.quora.service.business.PasswordCryptographyProvider;
 import com.upgrad.quora.service.entity.UserAuthEntity;
 import com.upgrad.quora.service.entity.UserEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -10,70 +12,33 @@ import javax.persistence.PersistenceContext;
 
 @Repository
 public class UserDao {
-
   @PersistenceContext
   private EntityManager entityManager;
+  @Autowired
+  private PasswordCryptographyProvider passwordCryptographyProvider;
 
-  /**
-   * This methods creates new user from given UserEntity object
-   *
-   * @param userEntity the UserEntity object from which new user will be created
-   *
-   * @return UserEntity object
-   */
   public UserEntity createUser(UserEntity userEntity) {
+    String[] encryptedText = passwordCryptographyProvider.encrypt(userEntity.getPassword());
+    userEntity.setSalt(encryptedText[0]);
+    userEntity.setPassword(encryptedText[1]);
     entityManager.persist(userEntity);
     return userEntity;
   }
 
-  /**
-   * This method helps find existing user by user name
-   *
-   * @param userName the user name which will be searched in database for existing user
-   *
-   * @return UserEntity object if user with requested user name exists in database
-   */
   public UserEntity getUserByUserName(final String userName) {
     try {
-      return entityManager.createNamedQuery("userByUserName", UserEntity.class).setParameter("userName", userName).getSingleResult();
+      return entityManager.createNamedQuery("userByEmail", UserEntity.class).setParameter("userName", userName).getSingleResult();
     } catch (NoResultException nre) {
       return null;
     }
   }
 
-  /**
-   * This method helps find existing user by email id
-   *
-   * @param email the email id which will be searched in database for existing user
-   *
-   * @return UserEntity object if user with requested email id exists in database
-   */
-  public UserEntity getUserByEmail(final String email) {
+  public UserEntity getUserByUuid(final String uuid) {
     try {
-      return entityManager.createNamedQuery("userByEmail", UserEntity.class).setParameter("email", email).getSingleResult();
+      return entityManager.createNamedQuery("userByUuid", UserEntity.class).setParameter("uuid", uuid).getSingleResult();
     } catch (NoResultException nre) {
       return null;
     }
-  }
-
-  /**
-   * This method helps find existing user by uuid
-   *
-   * @param uuid the user id which will be searched in database for existing user
-   *
-   * @return UserEntity object if user with requested uuid exists in database
-   */
-  public UserEntity getUserByUuid(final String uuid){
-    try{
-      return entityManager.createNamedQuery("userByUuid", UserEntity.class).setParameter("uuid", uuid).getSingleResult();
-    } catch (NoResultException nre){
-      return null;
-    }
-  }
-
-  public void deleteUser(String uuid) {
-    UserEntity userEntity = getUserByUuid(uuid);
-    entityManager.remove(userEntity);
   }
 
   public UserAuthEntity createAuthToken(final UserAuthEntity userAuthEntity) {
@@ -85,11 +50,20 @@ public class UserDao {
     entityManager.merge(updatedUserEntity);
   }
 
-  public UserAuthEntity getUserAuthToken(final String accessToken) {
+  public UserAuthEntity getUserAuthByToken(final String accessToken) {
     try {
       return entityManager.createNamedQuery("userAuthTokenByAccessToken", UserAuthEntity.class).setParameter("accessToken", accessToken).getSingleResult();
     } catch (NoResultException nre) {
       return null;
     }
   }
+
+  public void updateUserAuth(final UserAuthEntity updatedUserAuthEntity) {
+    entityManager.merge(updatedUserAuthEntity);
+  }
+
+  public void deleteUserByUuid(final UserEntity userEntity) {
+    entityManager.remove(userEntity);
+  }
+
 }

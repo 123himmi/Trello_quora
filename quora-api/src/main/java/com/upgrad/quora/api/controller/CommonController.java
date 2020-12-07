@@ -1,7 +1,8 @@
 package com.upgrad.quora.api.controller;
 
+
 import com.upgrad.quora.api.model.UserDetailsResponse;
-import com.upgrad.quora.service.business.UserBusinessService;
+import com.upgrad.quora.service.business.CommonService;
 import com.upgrad.quora.service.entity.UserEntity;
 import com.upgrad.quora.service.exception.AuthorizationFailedException;
 import com.upgrad.quora.service.exception.UserNotFoundException;
@@ -16,24 +17,13 @@ import org.springframework.web.bind.annotation.*;
 public class CommonController {
 
     @Autowired
-    private UserBusinessService userBusinessService;
+    private CommonService commonService;
 
-    @RequestMapping(method = RequestMethod.GET, path = "/userprofile/{userId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<UserDetailsResponse> userProfile(@PathVariable("userId") final String userId, @RequestHeader("authorization") final String authorization) throws AuthorizationFailedException, UserNotFoundException {
-
-        // Get user entity for given user id
-        UserEntity userEntity = userBusinessService.getUser(userId, authorization);
-
-        // Return response
-        UserDetailsResponse userDetailsResponse = new UserDetailsResponse()
-                .firstName(userEntity.getFirstName())
-                .lastName(userEntity.getLastName())
-                .userName(userEntity.getUserName())
-                .emailAddress(userEntity.getEmail())
-                .country(userEntity.getCountry())
-                .aboutMe(userEntity.getAboutMe())
-                .dob(userEntity.getDob())
-                .contactNumber(userEntity.getContactNumber());
+    @RequestMapping(path = "/userprofile/{userId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<UserDetailsResponse> userProfile(@RequestHeader("authorization") final String authorization, @PathVariable(name = "userId") final String userId) throws AuthorizationFailedException, UserNotFoundException {
+        UserEntity userEntity = commonService.userProfile(authorization, userId);
+        UserDetailsResponse userDetailsResponse = new UserDetailsResponse().firstName(userEntity.getFirstName()).lastName(userEntity.getLastName()).aboutMe(userEntity.getAboutMe())
+                .contactNumber(userEntity.getContactNumber()).country(userEntity.getCountry()).dob(userEntity.getDob()).emailAddress(userEntity.getEmailAddress()).userName(userEntity.getUserName());
         return new ResponseEntity<UserDetailsResponse>(userDetailsResponse, HttpStatus.OK);
     }
 }
